@@ -1,3 +1,8 @@
+---
+layout: page
+title: F#
+permalink: /fsharp/
+---
 # Functional programming in F#
 
 ## Week 1

@@ -16,7 +16,7 @@
 title: 
 email: thomaslienchristensen@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This page is will serve as a hub for my school work.
+  This page will serve as a hub for my school work.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
