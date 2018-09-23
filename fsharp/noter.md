@@ -60,7 +60,7 @@ It is also possible to compose a list as such:
 let x = 1::2::3::[4;5;6;7];;
 val x : int list = [1; 2; 3; 4; 5; 6; 7]
 ```
-While the below pattern binds the list to `x` to 1, `y` to 2, `z` to 4 and `xs` to [5;6]. Hence the whole list is bound to `x::y::z::xs` 
+While the below pattern binds `x` to 1, `y` to 2, `z` to 3 and `xs` to [4;5;6]. Hence the whole list is bound to `x::y::z::xs` 
 
 ```fsharp
 let x::y::z::xs = [1; 2; 3; 4; 5; 6];;
@@ -87,6 +87,7 @@ or strings:
 
 ```fsharp
 let (x,y)::z = [("Hi", "there");("Hi", "there");("Hello", "world")];
+val z : (string * string) list = [("Hi", "there"); ("Hello", "world")]
 val y : string = "there"
 val x : string = "Hi"
 ```
@@ -99,16 +100,16 @@ val fam : person list = [{name = "Mom";
                                        age = 56;}]
 ```
 
-#### List range expresssions
+#### **List range expresssions**
 
-The range expression is a special construct that allows us to construct lists from patterns like `[b..e]` and `[b..s..e]` where `b, e, s` are number types. `[b..e]` is called the _range_ expression, creating a list ranging from `b` to `e`. The numbers may be positive or negative, however not 0.
+The range expression is a special construct that allows us to construct lists from patterns like `[b..e]` and `[b..s..e]` where `b, s, e` are number types. `[b..e]` is called the _range_ expression, creating a list ranging from `b` to `e`. The numbers may be positive or negative.
 
 ```fsharp
 let l = [1..5];;
 val l : int list = [1; 2; 3; 4; 5]
 ```
 
-the `s` in the range expression is called the _step_. The step is either ascending or descending, depending on the sign of `s`.
+the `s` in the range expression is called the _step_. The step is either ascending or descending, depending on the sign of `s`, however `s` may never be 0.
 For instance, the ascending list of integers in steps of 5 from 1-16 is
 
 ```fsharp
@@ -116,7 +117,7 @@ let l = [1..5..16];;
 val l : int list = [1; 6; 11; 16]
 ```
 
-#### Pattern matching on result of recursive call
+#### **Pattern matching on result of recursive call**
 
 We can split the result of a recursive call into components using pattern matching. The function _sumProd_ computes the pair consiting of the sum and the product of the elements in a list of integers.
 
@@ -143,7 +144,7 @@ mix ([1;2;3], [3;2;1]);;
 val it : int list = [1; 3; 2; 2; 3; 1]
 ```
 
-### Polymorphism
+### **Polymorphism**
 
 
 The wildcard pattern can be used in tuple patterns. Every value matches this pattern, but the matching provides no bindings. For example:
