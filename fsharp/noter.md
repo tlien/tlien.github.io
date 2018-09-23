@@ -39,7 +39,10 @@ let rec multiplicity(x, ys) =
 It computes the multiplicity of a value in an array or list of values of the same type. This means that the function is able to find the multiplicity of anything from type `bool` to type `int`.
 The `tail` is the remainder of the list, which is an immutable type. The head always points at the tail, and the head will always be the current value. As the tail is passed in the recursive callback `multiplicity(x,tail)`, the next iteration will then treat the first element as the head and the remainder as its tail. This keeps going until the last element of the list, which will pass an empty tail and match the criteria `[] -> 0`. Whenever the head matches the value `x`, the multiplicity is increased by 1. More on lists below.
 
-___ 
+<br>
+
+___
+
 <br>
 
 ## Week 2
@@ -146,8 +149,7 @@ mix ([1;2;3], [3;2;1]);;
 val it : int list = [1; 3; 2; 2; 3; 1]
 ```
 
-### **Polymorphism**
-
+#### **Tuples and records**
 
 The wildcard pattern can be used in tuple patterns. Every value matches this pattern, but the matching provides no bindings. For example:
 
@@ -174,7 +176,10 @@ val m : int = 3
 val d : int = 2
 ```
 
-___ 
+<br>
+
+___
+
 <br>
 
 ## Week 3
