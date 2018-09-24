@@ -173,7 +173,60 @@ Significantly faster than 3DES.
 - 128 bit block length
 - Support for 128, 192 and 256 bit keys
 - See page 56/57 
+
 ___
+
+## Lab
+
+### Working with Cryptools
+
+#### 1. Encrypt / decrypt a message using a symmetric encryption algorithm, for instance DES, AES, IDEA or 3DES.
+
+I encrypted / decrypted a message using 3DES with a 128 bit key. The result is as follows:
+
+![](lab2img/3DES_enc_dec.PNG)
+
+The message is easily decrypted once you know what algorithm is used and you're provided with the secret key.
+
+#### 2. Make a brute force attack on DES. How long before your computer compromises a secret key?
+
+I encrypted a ~300 character message with DES and attempted to compromise a secret key with brute-force.
+
+![](lab2img/bf_DES.PNG)
+
+#### 3. With a sniffer we've caught a DES encrypted message, and found part of the key 12 34 56 78 90 ?? ?? ??. How long does it take to complete the key by brute force?
+
+![](lab2img/def_sniff_bf.PNG)
+![](lab2img/def_sniff_bf_res.PNG)
+
+...not long.
+
+#### 4. The Caesar algorithm
+
+The Caesar algorithm is an encryption algorithm based on the German language. It uses the alphabet to shift plaintext. For instance, the key `A` will shift all letters by 1 space. `D` will shift all letters by 4 spaces, and so on and so forth. When trying to decrypt a Caesar algorithm, the letters are analysed and shown in a histogram, making it possible to see which characters are the most common. Having only 25 keys (26, but `Z` would shift all characters by 26 spaces, leaving the encrypted message identical to the decrypted), it is not a viable encryption algorithm. We will try to encrypt and decrypt a message using the Caesar algorithm.
+
+![](lab2img/caesar_test.PNG)
+
+Also showing the histogram analysis, which suggests a private key of `A`.
+
+The alphabet can thus be written as:
+
+```
+A B C D E F G H I J K L M N O P Q R S T U V X Y Z
+Z A B C D E F G H I J K L M N O P Q R S T U V X Y
+```
+
+The following ciphertext has been encrypted using the key `J`, and hence shifted the alphabet by 9 spaces.
+
+```
+Drsc sc k dohd psvo, crygx sx ybnob dy rovz iye dy wkuo iyeb psbcd
+cdozc gsdr MbizDyyv.
+
+A B C D E F G H I J K L M N O P Q R S T U V X Y Z
+Q R S T U V X Y Z A B C D E F G H I J K L M N O P
+```
+
+
 
 
 
