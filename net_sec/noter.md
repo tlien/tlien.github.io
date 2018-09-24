@@ -13,6 +13,7 @@ permalink: /network-security/
 Eksamen kommer til at tage udgangspunkt i de labs, vi har gennem semesteret. Ingen faste afleveringer, men resultater og diskussioner samt eksterne kilder skal noteres, så der er noter til eksamen. Yderligere pensum bliver diskuteret fra uge 10.
 
 ## Lektion 1
+#### **Materiale: Kap. 1**
 
 * Passivt angreb
     * Aflytning af data
@@ -85,8 +86,8 @@ Når vi forsøger at logge ind via en usikret HTTP forbindelse, kan vi i Wiresha
             * CC4 Pre-defined session IDs (session hjacking)
 
 
-## Lektion 2
-### Cryptography
+## Lektion 2: Cryptography
+#### **Materiale: Kap. 2**
 
 #### **Symmetric encryption**
 
@@ -196,7 +197,8 @@ I encrypted a ~300 character message with DES and attempted to compromise a secr
 
 #### 3. With a sniffer we've caught a DES encrypted message, and found part of the key 12 34 56 78 90 ?? ?? ??. How long does it take to complete the key by brute force?
 
-![](lab2img/def_sniff_bf.PNG)
+![](lab2img/des_sniff_bf.PNG)
+
 ![](lab2img/def_sniff_bf_res.PNG)
 
 ...not long.
